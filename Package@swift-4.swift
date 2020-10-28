@@ -27,7 +27,7 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/IBM-Swift/Swift-cfenv.git", .upToNextMajor(from: "6.0.0")),
+        .package(url: "https://github.com/Kitura-Next/Swift-cfenv.git", .upToNextMajor(from: "6.0.0")),
     ],
     targets: [
         .target(

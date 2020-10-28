@@ -23,7 +23,7 @@ import LoggerAPI
 /// It is mainly used for obtaining credentials for services so Swift applications can be written in
 /// a platform agnostic way.
 ///
-/// There is a lot of information in the [README](https://github.com/IBM-Swift/CloudEnvironment/blob/master/README.md)
+/// There is a lot of information in the [README](https://github.com/Kitura-Next/CloudEnvironment/blob/master/README.md)
 /// explaining how you can use `cloudEnv` to access credentials for your services; more specific information is listed in the
 /// API documentation below.
 public class CloudEnv {
