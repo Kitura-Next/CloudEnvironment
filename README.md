@@ -5,18 +5,15 @@
 </p>
 
 <p align="center">
-<a href="https://kitura-next.github.io/CloudEnvironment/index.html">
-<img src="https://img.shields.io/badge/apidoc-CloudEnvironment-1FBCE4.svg?style=flat" alt="APIDoc">
-</a>
-    <a href="https://travis-ci.org/Kitura-Next/CloudEnvironment">
-    <img src="https://travis-ci.org/Kitura-Next/CloudEnvironment.svg?branch=master" alt="Build Status - Master">
-    </a>
-    <img src="https://img.shields.io/badge/os-macOS-green.svg?style=flat" alt="macOS">
-    <img src="https://img.shields.io/badge/os-linux-green.svg?style=flat" alt="Linux">
+    <a href="https://www.kituranext.org/learn/">
+    <img src="https://img.shields.io/badge/docs-kitura-1FBCE4.svg" alt="APIDoc"></a>
+    <a href="https://github.com/Kitura-Next/LoggerAPI/actions?query=workflow%3ASwift+MacOS">
+    <img src="https://github.com/Kitura-Next/LoggerAPI/workflows/Swift%20MacOS/badge.svg"></a>
+    <a href="https://github.com/Kitura-Next/LoggerAPI/actions?query=workflow%3ASwift+Ubuntu">
+    <img src="https://github.com/Kitura-Next/LoggerAPI/workflows/Swift%20Ubuntu/badge.svg"></a>
     <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
     <a href="http://swift-at-ibm-slack.mybluemix.net/">
-    <img src="http://swift-at-ibm-slack.mybluemix.net/badge.svg" alt="Slack Status">
-    </a>
+    <img src="http://swift-at-ibm-slack.mybluemix.net/badge.svg" alt="Slack Status"></a>
 </p>
 
 # CloudEnvironment
@@ -25,7 +22,8 @@ CloudEnvironment (formerly known as CloudConfiguration) is a convenience Swift p
 For example, to obtain the credentials for accessing a Cloudant database, you need to parse the `VCAP_SERVICES` environment variable when running in Cloud Foundry, while to obtain the same credentials when running in Kubernetes, you may need to parse an environment variable named `CLOUDANT_CREDENTIALS`. In other words, the path for obtaining certain environment values may differ from one cloud environment to another. By leveraging this package, you can make your Swift application environment-agnostic when it comes to obtaining such values. Using CloudEnvironment allows you to abstract these low-level details from your application's source code.
 
 ## Swift version
-The latest version of CloudEnvironment works with `4.0` and newer versions of the Swift binaries. You can download Swift binaries by following this [link](https://swift.org/download/#releases).
+Requires **Swift 5.1** or newer. You can download the Swift binaries by following this [link](https://swift.org/download/).  
+Compatibility with other Swift versions is not guaranteed.
 
 ## Abstraction and supported search pattern types
 This package allows you to define a lookup key that your Swift application can leverage when searching for its corresponding value. This abstraction decouples your application from the actual name used for the environment variable you are looking for. For example, if you created a Cloudant service named `my-awesome-cloudant-db`, you don't have to use this name as the key in your Swift code to obtain its credentials. Instead, you can define a lookup key, say `cloudant-credentials` and map it to the actual service name, `my-awesome-cloudant-db`.
